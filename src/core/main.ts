@@ -52,25 +52,3 @@ class AsyncArray extends Array<any> implements AsyncArrayType {
 }
 
 export default AsyncArray;
-
-window.addEventListener('load', async () => {
-  console.log('loadeddddd!!!!!!!!');
-
-  let len = 20000001;
-  let arr = [...new Array(len)];
-
-  let asyncList = new AsyncArray();
-  console.log('Starting initialization');
-  console.time('init');
-  await asyncList.init<number>(arr);
-  console.timeEnd('init');
-
-  console.log('filling array');
-  console.time('mapping');
-  const res = await asyncList.mapAsync((_: any) => ({
-    x: Math.floor(Math.random() * 10000),
-  }));
-  console.timeEnd('mapping');
-  console.log('completed map');
-  asyncList = res;
-});
