@@ -31,6 +31,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "keywords": [
+    "arrays",
+    "typescript",
+    "non-blocking",
+    "async array methods"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msx47/nb-arrays"
+  },
   "name": "nb-arrays",
   "author": "msx47",
   "description": "make iteration of very large arrays non-blocking with promises",
